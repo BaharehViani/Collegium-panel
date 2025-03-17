@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meals - Collegium</title>
+    <link rel="stylesheet" href="../css/main-page.css">
+    <link rel="stylesheet" href="../css/meals.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+  <body>
+  <!-- Sidebar Start -->
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">Collegium</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="dashboard.html">
+          <i class="fa-solid fa-house"></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="courses.html">
+             <i class="fa-regular fa-folder-open"></i>
+            <span class="link_name">Courses</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="courses.html">Courses</a></li>
+          <li><a href="grades.html">Grades</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="forms.html">
+          <i class="fa-regular fa-pen-to-square"></i>
+          <span class="link_name">Forms</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="forms.html">Forms</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="meals.html">
+          <i class="fa-solid fa-utensils"></i>
+          <span class="link_name">Meals</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="meals.html">Meals</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-compass-drafting"></i>
+          <span class="link_name">Projects</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Projects</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+            <i class="fa-regular fa-calendar"></i>
+            <span class="link_name">Calender</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Calender</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <span class="link_name">Payments</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Payments</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-regular fa-bookmark"></i>
+          <span class="link_name">Library</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Library</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="../../index.html">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <span class="link_name">Log Out</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="../../index.html">Log Out</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="profile-details">
+          <div class="profile-content">
+            <img src="../assets/img/profile_pic.jpg" alt="profileImg">
+          </div>
+          <div class="name-job">
+            <div class="profile_name">Bahareh Viani</div>
+            <div class="job">Student</div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- Sidebar End -->
+    
+    <section class="home-section">
+      <div class="home-content">
+        <i class='bx bx-menu'></i>
+        <span class="text">Meals</span>
+      </div>
+      <div id="content-area">
+        <div class="meal-reservation-container">
+          <h2>Tommorrow's Meal Reservation</h2>
+          <p class="date" id="currentDate"></p>
+          
+          <!-- Lunch Section -->
+          <div class="meal-category">
+            <h3>Lunch</h3>
+            <div class="meal-options">
+              <!--food-->
+              <div class="meal-card" data-reserved="false">
+                <span class="meal-icon" role="img" aria-label="burger">🍔</span>
+                <span class="meal-title">Cheesy Burger</span>
+                <div class="meal-actions">
+                  <button class="reserve-btn">Reserve Meal</button>
+                  <button class="cancel-btn" style="display:none;">Cancel Reservation</button>
+                </div>
+              </div>
+              <div class="meal-card" data-reserved="false">
+                <span class="meal-icon" role="img" aria-label="salad">🥗</span>
+                <span class="meal-title">Chicken Salad</span>
+                <div class="meal-actions">
+                  <button class="reserve-btn">Reserve Meal</button>
+                  <button class="cancel-btn" style="display:none;">Cancel Reservation</button>
+                </div>
+              </div>
+              <!--drink-->
+              <div class="meal-card" data-reserved="false">
+                <span class="meal-icon" role="img" aria-label="drink">🥤</span>
+                <span class="meal-title">Soda</span>
+                <div class="meal-actions">
+                  <button class="reserve-btn">Reserve Drink</button>
+                  <button class="cancel-btn" style="display:none;">Cancel Reservation</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Dinner Section -->
+          <div class="meal-category dinner">
+            <h3>Dinner</h3>
+            <div class="meal-options">
+              <!--food-->
+              <div class="meal-card" data-reserved="false">
+                <span class="meal-icon" role="img" aria-label="spaghetti">🍝</span>
+                <span class="meal-title">Spaghetti Bolognese</span>
+                <div class="meal-actions">
+                  <button class="reserve-btn">Reserve Meal</button>
+                  <button class="cancel-btn" style="display:none;">Cancel Reservation</button>
+                </div>
+              </div>
+              <div class="meal-card" data-reserved="false">
+                <span class="meal-icon" role="img" aria-label="fish">🐟</span>
+                <span class="meal-title">Grilled Salmon</span>
+                <div class="meal-actions">
+                  <button class="reserve-btn">Reserve Meal</button>
+                  <button class="cancel-btn" style="display:none;">Cancel Reservation</button>
+                </div>
+              </div>
+              <!--drink-->
+              <div class="meal-card" data-reserved="false">
+                <span class="meal-icon" role="img" aria-label="drink">🍹</span>
+                <span class="meal-title">Smoothie</span>
+                <div class="meal-actions">
+                  <button class="reserve-btn">Reserve Drink</button>
+                  <button class="cancel-btn" style="display:none;">Cancel Reservation</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+    <script src="../js/main-page.js"></script>
+    <script src="../js/meals.js"></script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+#content-area {
+    background: #E4E9F7;
+}
+/* Container & Course Information */
+.media-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+  
+/* Updated Course Info: Flexible layout for details & schedule */
+.course-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.course-info-left h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+  
+.course-info-left p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0 0 0;
+}
+  
+.course-schedule {
+    text-align: right;
+}
+  
+.course-schedule p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+    padding: 5px 0;
+}
+  
+/* Media Sessions */
+.media-sessions {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+  
+.session-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+  
+.session-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #222;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+  
+  /* Video Media Item */
+  .media-item.video video {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: auto;
+  }
+  
+/* Media Gallery: Separate rows for PDF and images */
+.media-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+  
+.gallery-row {
+    display: flex;
+    gap: 20px;
+}
+  
+/* PDF Card */
+.media-item.pdf {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #e74c3c;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    background: #faebeb;
+    transition: transform 0.3s ease;
+}
+  
+.media-item.pdf:hover {
+    transform: translateY(-2px);
+}
+  
+.media-item.pdf a {
+    text-decoration: none;
+}
+  
+.media-item.pdf i {
+    font-size: 40px;
+    color: #e74c3c;
+    margin-bottom: 5px;
+}
+  
+.media-item.pdf span {
+    font-size: 14px;
+    color: #333;
+}
+  
+/* Image Cards */
+.media-item.img {
+    flex: 1;
+    max-width: 350px;
+    transition: transform 0.3s ease;
+}
+  
+.media-item.img:hover {
+    transform: translateY(-5px);
+}
+  
+.media-item.img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+  

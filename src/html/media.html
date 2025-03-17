@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media - Collegium</title>
+    <link rel="stylesheet" href="../css/main-page.css" />
+    <link rel="stylesheet" href="../css/media.css" />
+    <!-- Boxicons CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sidebar Start -->
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class='bx bxl-c-plus-plus'></i>
+        <span class="logo_name">Collegium</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="dashboard.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="courses.html">
+              <i class="fa-regular fa-folder-open"></i>
+              <span class="link_name">Courses</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="courses.html">Courses</a></li>
+            <li><a href="grades.html">Grades</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="forms.html">
+            <i class="fa-regular fa-pen-to-square"></i>
+            <span class="link_name">Forms</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="forms.html">Forms</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="meals.html">
+            <i class="fa-solid fa-utensils"></i>
+            <span class="link_name">Meals</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="meals.html">Meals</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-compass-drafting"></i>
+            <span class="link_name">Projects</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Projects</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-calendar"></i>
+            <span class="link_name">Calender</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Calender</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-dollar-sign"></i>
+            <span class="link_name">Payments</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Payments</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-bookmark"></i>
+            <span class="link_name">Library</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Library</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="../../index.html">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <span class="link_name">Log Out</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="../../index.html">Log Out</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="../assets/img/profile_pic.jpg" alt="profileImg" />
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Bahareh Viani</div>
+              <div class="job">Student</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- Sidebar End -->
+
+    <section class="home-section">
+      <div class="home-content">
+        <i class='bx bx-menu'></i>
+        <span class="text">Media</span>
+      </div>
+      <div id="content-area">
+        <div class="media-container">
+          <!-- Course Information with Schedule -->
+          <div class="course-info">
+            <div class="course-info-left">
+              <h2>Web Programming</h2>
+              <p>Instructor : Dr. Maryam Mohammadzad</p>
+            </div>
+            <div class="course-schedule">
+              <p>Sunday : 10–12</p>
+              <p>Tuesday : 14–16</p>
+            </div>
+          </div>
+
+          <!-- Session Media Sections -->
+          <div class="media-sessions">
+            <!-- Session 1: Lecture Video -->
+            <div class="session-card">
+              <h3>Session 1 - Lecture Video</h3>
+              <div class="media-item video">
+                <video controls>
+                  <source src="../assets/video/118112-713841419_tiny.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <!-- Session 2: Lecture Materials (PDF first, then Images) -->
+            <div class="session-card">
+              <h3>Session 2 - Lecture Materials</h3>
+              <div class="media-gallery">
+                <!-- Row for PDF file -->
+                <div class="gallery-row pdf-row">
+                  <div class="media-item pdf">
+                    <a href="../assets/pdf/Lecture Notes.pdf" target="_blank">
+                      <i class="fas fa-file-pdf"></i>
+                      <span>Lecture Notes</span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Row for Images -->
+                <div class="gallery-row img-row">
+                  <div class="media-item img">
+                    <a href="https://media.licdn.com/dms/image/v2/D5612AQEKtlE4hWEkyA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1708420901024?e=2147483647&v=beta&t=hEVVFRMz6LgYxoYH9LmBDq9EdJFLK6Vz4f1EC-Zg-XE" target="_blank">
+                      <img src="../assets/img/css_properties.jpg" alt="Lecture Image 2" />
+                    </a>
+                  </div>
+                  <div class="media-item img">
+                    <a href="https://data-flair.training/blogs/html-tags-with-examples/" target="_blank">
+                      <img src="../assets/img/HTML-Tags-df.jpg" alt="Lecture Image 1" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Session 3: Recap Video -->
+            <div class="session-card">
+              <h3>Session 3 - Recap Video</h3>
+              <div class="media-item video">
+                <video controls>
+                  <source src="../assets/video/163182-827112954_medium.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/main-page.js"></script>
+  </body>
+</html>
