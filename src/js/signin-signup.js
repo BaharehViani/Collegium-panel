@@ -15,3 +15,10 @@ sign_up_btn.addEventListener("click", () => {
 sign_in_btn.addEventListener("click", () => {
     container.classList.remove("sign-up-mode");
 });
+
+
+document.getElementById("numberInput").addEventListener("input", function () {
+    if (this.value.length > 10) {
+        this.value = this.value.slice(0, 10);
+    }
+});

@@ -274,8 +274,3 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
-/* Hide numeric increase/decrease arrows in Firefox */
-input[type="number"] {
-    -moz-appearance: textfield;
-}
