@@ -267,3 +267,15 @@ form.sign-up-form {
     z-index: 2;
     opacity: 1;
 }
+
+/* Hide numeric increase/decrease arrows in WebKit browsers */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide numeric increase/decrease arrows in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
