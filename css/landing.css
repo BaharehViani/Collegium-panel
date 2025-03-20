@@ -11,7 +11,7 @@
 }
 
 .dark {
-  /* --originalMainColor: #64bcf4; */
+  /* --mainColor: #64bcf4; */
   --mainColor: #3498db;
   --hoverColor: #5bacdf;
   --backgroundColor: #192e3a;
@@ -84,7 +84,6 @@ header .container {
 .logo {
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 
 .logo img {
