@@ -1,0 +1,132 @@
+#content-area {
+    background: #E4E9F7;
+    padding-bottom: 30px;
+}
+
+.profile-container {
+    max-width: 700px;
+    margin: 0px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+  
+.profile-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+}
+  
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.profile-pic-wrapper {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    margin-bottom: 20px;
+}
+  
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid #4a90e2;
+    object-fit: cover;
+}
+  
+#change-photo-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+  
+#change-photo-btn:hover {
+    background: #357ab8;
+}
+  
+.profile-form {
+    width: 100%;
+}
+  
+.profile-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+  
+.profile-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+  
+.profile-form input:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+  
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+  
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+#edit-btn {
+    background-color: #4a90e2;
+    color: #fff;
+}
+  
+#edit-btn:hover {
+    background-color: #357ab8;
+}
+  
+#save-btn {
+    background-color: #4caf50;
+    color: #fff;
+}
+  
+#save-btn:hover {
+    background-color: #388e3c;
+}
+  
+#cancel-btn {
+    background-color: #f44336;
+    color: #fff;
+}
+  
+#cancel-btn:hover {
+    background-color: #d32f2f;
+}
+  
+.hidden {
+    display: none;
+}
+  
