@@ -1,5 +1,3 @@
-const axiosInstance = window.axiosInstance;
-
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
@@ -30,7 +28,7 @@ signupForm.addEventListener("submit", async function (event) {
     const password = document.querySelector('.sign-up-form input[placeholder="Password"]').value;
 
     try {
-        const response = await axiosInstance.post("/api/users/register", {
+        const response = await axios.post("http://localhost:3000/api/users/register", {
             full_name: fullName,
             username: username,
             password: password
@@ -54,7 +52,7 @@ loginForm.addEventListener("submit", async (event) => {
 
     try {
         // ارسال درخواست به سرور برای ورود
-        const response = await axiosInstance.post('/api/users/login', {
+        const response = await axios.post('http://localhost:3000/api/users/login', {
         username,
         password
         });
