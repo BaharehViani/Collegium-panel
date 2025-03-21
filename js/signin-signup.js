@@ -1,3 +1,5 @@
+import userStore from "./userStore.js";
+
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
@@ -24,7 +26,7 @@ signupForm.addEventListener("submit", async function (event) {
 
     // گرفتن مقادیر ورودی‌ها
     const fullName = document.querySelector('.sign-up-form input[placeholder="FullName"]').value;
-    const username = document.querySelector('.sign-up-form input[placeholder="Username"]').value;
+    const username = document.querySelector('.sign-up-form input[placeholder="Username (National ID)"]').value;
     const password = document.querySelector('.sign-up-form input[placeholder="Password"]').value;
 
     try {
@@ -53,11 +55,11 @@ loginForm.addEventListener("submit", async (event) => {
     try {
         // ارسال درخواست به سرور برای ورود
         const response = await axios.post('http://localhost:3000/api/users/login', {
-        username,
-        password
+            username,
+            password
         });
 
-        // در صورت موفقیت
+        userStore.setUser(response.data.user);
         console.log(response.data);
         alert("Login successful");
         window.location.href = "../html/dashboard.html";
