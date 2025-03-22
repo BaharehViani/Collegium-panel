@@ -1,5 +1,12 @@
 import userStore from "./userStore.js";
 
+const user = userStore.getUser();
+if (user) {
+        document.querySelector(".profile_name").textContent = user.full_name || "Unknown User";
+        document.querySelector(".job").textContent = user.role || "Student";
+        document.querySelector(".profile-content img").src = user.photo || "../assets/img/primary_pic.JPG";
+}
+
 let arrow = document.querySelectorAll(".arrow");
 for (var i = 0; i < arrow.length; i++) {
     arrow[i].addEventListener("click", (e)=>{
