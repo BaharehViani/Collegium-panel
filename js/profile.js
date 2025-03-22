@@ -110,6 +110,10 @@ document.addEventListener("DOMContentLoaded", function () {
         userStore.setUser({ ...user, ...detailsResponse.data.user });
         if (detailsResponse.data.user.photo) {
           profilePic.src = detailsResponse.data.user.photo;
+          document.querySelector(".profile-content img").src = detailsResponse.data.user.photo;
+        }
+        if (detailsResponse.data.user.full_name) {
+          document.querySelector(".profile_name").textContent = detailsResponse.data.user.full_name;
         }
       } else {
         alert(detailsResponse.data.message || "Error saving changes!");
