@@ -1,13 +1,19 @@
 #content-area {
-    background: #E4E9F7;
+    /* background: #E4E9F7; */
+    background: linear-gradient(135deg, #c3e8ff, #d4f8c4);
     padding-bottom: 30px;
 }
 
+.home-section {
+    background: linear-gradient(135deg, #c3e8ff, #d4f8c4);
+}
+
 .profile-container {
+    width: 100%;
     max-width: 700px;
     margin: 0px auto;
     background: #fff;
-    padding: 30px;
+    padding: 20px 30px 30px;
     border-radius: 15px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
