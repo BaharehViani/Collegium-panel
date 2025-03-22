@@ -2,39 +2,39 @@
 const courses = [
     {
       title: "Data Mining",
-      time: "10:00 AM - 12:00 AM",
-      day: "Tursday",
+      time: "10:00 AM - 12:00 PM",
+      day: "Tuesday",
       instructor: "Dr. Balafar"
     },
     {
       title: "Information Security",
-      time: "10:00 PM - 12:00 PM",
+      time: "10:00 AM - 12:00 PM",
       day: "Wednesday",
       instructor: "Dr. Mortazavi"
     },
     {
       title: "Web Programming",
-      time: "8:00 PM - 10:00 PM",
+      time: "8:00 AM - 10:00 AM",
       day: "Sunday",
       instructor: "Dr. Mohammadzad"
     },
     {
       title: "Cloud Computing",
-      time: "10:00 PM - 12:00 PM",
+      time: "10:00 AM - 12:00 PM",
       day: "Sunday",
       instructor: "Dr. Khanli"
     },
     {
         title: "Software Engineering",
-        time: "8:00 PM - 10:00 PM",
+        time: "8:00 AM - 10:00 AM",
         day: "Tuesday",
         instructor: "Dr. Taghinezhad"
     },
     {
-      title: "Tafsir Mozuei",
-      time: "14:00 PM - 16:00 PM",
+      title: "Database Design",
+      time: "8:00 AM - 10:00 AM",
       day: "Wednesday",
-      instructor: "Ms. Asl Nezhadi"
+      instructor: "Dr. Farzinvash"
     },
 ];
   
@@ -73,7 +73,7 @@ function renderCourses() {
       // Create "Course Files" button
       const courseFilesLink = document.createElement('a');
       courseFilesLink.className = 'btn course-files';
-      courseFilesLink.href = "../html/media.html";
+      courseFilesLink.href = `../html/media.html?course=${encodeURIComponent(course.title)}`;
       courseFilesLink.textContent = "Files & Videos";
 
       // Append buttons to container
