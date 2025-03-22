@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const profilePic = document.querySelector(".profile-pic");
   if (user.photo) {
     profilePic.src = user.photo;
+  } else {
+    profilePic.src = "../assets/img/primary_pic.JPG";
   }
 
   const editBtn = document.getElementById("edit-btn");
