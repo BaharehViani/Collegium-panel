@@ -80,7 +80,7 @@
 }
   
 .meal-card button {
-    background: #56ccf2;
+    background: #2dc5f7;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -88,7 +88,7 @@
     font-size: 1rem;
     cursor: pointer;
     margin: 0.3rem;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
 }
   
 .meal-card button:hover {
