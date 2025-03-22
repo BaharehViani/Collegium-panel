@@ -129,4 +129,12 @@ button {
 .hidden {
     display: none;
 }
+
+#delete-account-btn {
+    background-color: #ff5722;
+    color: #fff;
+}
   
+#delete-account-btn:hover {
+    background-color: #e64a19;
+}

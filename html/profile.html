@@ -98,14 +98,14 @@
         </ul>
       </li>
       <li>
-        <a href="../index.html">
-            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-            <span class="link_name">Log Out</span>
+        <a href="#" id="logout-btn">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span class="link_name">Log Out</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="../index.html">Log Out</a></li>
+          <li><a class="link_name" href="#" id="logout-btn">Log Out</a></li>
         </ul>
-      </li>
+      </li>    
       <li>
         <div class="profile-details">
           <a href="profile.html">
@@ -147,7 +147,7 @@
                 <input type="number" id="username" name="username" value="" disabled>
                 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" value="**********" disabled>
+                <input type="password" id="password" name="password" value="" disabled>
                 
                 <label for="birthdate">Birth Date:</label>
                 <input type="date" id="birthdate" name="birthdate" value="" disabled>
@@ -159,6 +159,7 @@
                   <button type="button" id="edit-btn">Edit</button>
                   <button type="submit" id="save-btn" class="hidden">Save</button>
                   <button type="button" id="cancel-btn" class="hidden">Cancel</button>
+                  <button type="button" id="delete-account-btn">Delete Account</button>
                 </div>
               </form>
             </div>
@@ -166,7 +167,7 @@
     </div>
   </section>
   
-  <script src="../js/main-page.js"></script>
+  <script src="../js/main-page.js" type="module"></script>
   <script src="../js/profile.js" type="module"></script>
 </body>
 </html>
