@@ -27,3 +27,16 @@ document.querySelectorAll("#logout-btn").forEach(btn => {
         window.location.href = "../index.html";
     });
 });
+
+function toggleSidebarBasedOnWidth() {
+    const sidebar = document.querySelector(".sidebar");
+    
+    if (window.outerWidth < 1361) {
+      sidebar.classList.add("close");  
+    } else {
+      sidebar.classList.remove("close"); 
+    }
+}
+
+toggleSidebarBasedOnWidth();
+window.addEventListener("resize", toggleSidebarBasedOnWidth);
