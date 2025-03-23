@@ -1,3 +1,5 @@
+const API_BASE_URL = "https://collegium-api-production.up.railway.app";
+
 const urlParams = new URLSearchParams(window.location.search);
 const course_name = urlParams.get("course");
 
@@ -6,7 +8,7 @@ async function fetchCourseData() {
     const course_name = urlParams.get("course");
 
     try {
-        const response = await axios.get(`http://localhost:3000/api/users/course/${encodeURIComponent(course_name)}`);
+        const response = await axios.get(`${API_BASE_URL}/api/users/course/${encodeURIComponent(course_name)}`);
         
         document.querySelector('.course-info-left h2').textContent = response.data.course_name;
         document.querySelector('.course-info-left p').textContent = `Instructor : ${response.data.instructor_name}`;

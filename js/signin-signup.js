@@ -1,5 +1,7 @@
 import userStore from "./userStore.js";
 
+const API_BASE_URL = "https://collegium-api-production.up.railway.app";
+
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
@@ -30,31 +32,29 @@ signupForm.addEventListener("submit", async function (event) {
     const password = document.querySelector('.sign-up-form input[placeholder="Password"]').value;
 
     try {
-        const response = await axios.post("http://localhost:3000/api/users/register", {
+        const response = await axios.post(`${API_BASE_URL}/api/users/register`, {
             full_name: fullName,
             username: username,
             password: password
         });
 
-        alert(response.data.message); // پیام موفقیت
-        window.location.href = "?mode=signin"; // بعد از ثبت‌نام، به صفحه لاگین بره
+        alert(response.data.message); 
+        window.location.href = "?mode=signin"; 
     } catch (error) {
-        alert(error.response.data.message || "Registration failed!"); // نمایش ارور
+        alert(error.response.data.message || "Registration failed!"); 
     }
 });
 
 
 const loginForm = document.querySelector(".sign-in-form");
-// افزودن event listener به فرم
 loginForm.addEventListener("submit", async (event) => {
-    event.preventDefault(); // جلوگیری از ارسال فرم به صورت پیش‌فرض
+    event.preventDefault();
 
     const username = document.querySelector(".sign-in-form input[type='text']").value;
     const password = document.querySelector(".sign-in-form input[type='password']").value;
 
     try {
-        // ارسال درخواست به سرور برای ورود
-        const response = await axios.post('http://localhost:3000/api/users/login', {
+        const response = await axios.post(`${API_BASE_URL}/api/users/login`, {
             username,
             password
         });

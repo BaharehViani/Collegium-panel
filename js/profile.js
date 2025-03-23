@@ -1,5 +1,7 @@
 import userStore from "./userStore.js";
 
+const API_BASE_URL = "https://collegium-api-production.up.railway.app";
+
 document.addEventListener("DOMContentLoaded", function () {
   const user = userStore.getUser();
   console.log("User data:", user);
@@ -101,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function sendUpdateRequest(updatedUserData) {
     try {
-      const detailsResponse = await axios.patch(`http://localhost:3000/api/users/${user.id}`, updatedUserData, {
+      const detailsResponse = await axios.patch(`${API_BASE_URL}/api/users/${user.id}`, updatedUserData, {
         headers: { "Content-Type": "application/json" }
       });
   
@@ -149,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
   deleteBtn.addEventListener("click", async function () {
     if (confirm("Are you sure you want to delete your account? This action cannot be undone.")) {
       try {
-        const response = await axios.delete(`http://localhost:3000/api/users/${user.id}`);
+        const response = await axios.delete(`${API_BASE_URL}/api/users/${user.id}`);
         
         if (response.status === 200) {
           alert("Account deleted successfully.");
