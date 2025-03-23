@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://collegium-api-production.up.railway.app";
+const API_BASE_URL = "https://collegium-api.up.railway.app";
 
 const urlParams = new URLSearchParams(window.location.search);
 const course_name = urlParams.get("course");

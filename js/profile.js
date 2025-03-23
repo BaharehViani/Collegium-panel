@@ -1,6 +1,6 @@
 import userStore from "./userStore.js";
 
-const API_BASE_URL = "https://collegium-api-production.up.railway.app";
+const API_BASE_URL = "https://collegium-api.up.railway.app";
 
 document.addEventListener("DOMContentLoaded", function () {
   const user = userStore.getUser();
