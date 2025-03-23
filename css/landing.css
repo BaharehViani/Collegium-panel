@@ -400,6 +400,10 @@ header .container {
     bottom: -180px;
     left: -150px;
   }
+
+  .background-image-1, .background-image-2 {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 470px) {
