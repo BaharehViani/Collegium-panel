@@ -60,7 +60,6 @@ loginForm.addEventListener("submit", async (event) => {
         });
 
         userStore.setUser(response.data.user);
-        console.log(response.data);
         alert("Login successful");
         window.location.href = "../html/dashboard.html";
     } catch (error) {
