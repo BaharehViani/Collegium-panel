@@ -1,10 +1,18 @@
 import userStore from "./userStore.js";
-
 const user = userStore.getUser();
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (!user || !user.username) {
+      alert("User not logged in!");
+      window.location.href = "../index.html";
+      return;
+    } 
+});
+
 if (user) {
-        document.querySelector(".profile_name").textContent = user.full_name || "Unknown User";
-        document.querySelector(".job").textContent = user.role || "Student";
-        document.querySelector(".profile-content img").src = user.photo || "../assets/img/primary_pic.JPG";
+    document.querySelector(".profile_name").textContent = user.full_name || "Unknown User";
+    document.querySelector(".job").textContent = user.role || "Student";
+    document.querySelector(".profile-content img").src = user.photo || "../assets/img/primary_pic.JPG";
 }
 
 let arrow = document.querySelectorAll(".arrow");
