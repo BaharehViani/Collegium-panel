@@ -1,4 +1,5 @@
 const API_BASE_URL = "https://collegium-api.up.railway.app";
+
 const studentsList = document.getElementById("students-list");
 const majorSelect = document.getElementById("major-select");
 

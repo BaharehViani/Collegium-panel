@@ -4,11 +4,17 @@ const API_BASE_URL = "https://collegium-api.up.railway.app";
 
 const user = userStore.getUser();
 
+if (user.role === "Admin") {
+  document.getElementById("major").style.display = "none";
+  document.getElementById("major-lable").style.display = "none";
+} else {
+  document.getElementById("major").value = user.major || "";
+}
+
 document.getElementById("name").value = user.full_name || "";
 document.getElementById("username").value = user.username || "";
 document.getElementById("birthdate").value = user.birth_date || "";
 document.getElementById("mobile").value = user.phone_number || "";
-document.getElementById("major").value = user.major || "";
 
 const passwordField = document.getElementById("password");
 passwordField.value = "••••••••";
