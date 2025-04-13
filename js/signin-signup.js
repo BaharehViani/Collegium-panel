@@ -28,7 +28,7 @@ signupForm.addEventListener("submit", async function (event) {
 
     // گرفتن مقادیر ورودی‌ها
     const fullName = document.querySelector('.sign-up-form input[placeholder="FullName"]').value;
-    const username = document.querySelector('.sign-up-form input[placeholder="Username (National ID)"]').value;
+    const username = document.querySelector('.sign-up-form input[placeholder="National ID (Username)"]').value;
     const major = document.querySelector('.sign-up-form input[placeholder="Field of Study"]').value;
     const password = document.querySelector('.sign-up-form input[placeholder="Password"]').value;
 
