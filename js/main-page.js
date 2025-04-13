@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 if (user) {
     document.querySelector(".profile_name").textContent = user.full_name || "Unknown User";
-    document.querySelector(".job").textContent = user.role || "Student";
+    document.querySelector(".job").textContent = user.role || "Unknown Role";
     document.querySelector(".profile-content img").src = user.photo || "../assets/img/primary_pic.JPG";
 }
 

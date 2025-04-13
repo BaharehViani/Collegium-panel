@@ -8,6 +8,7 @@ document.getElementById("name").value = user.full_name || "";
 document.getElementById("username").value = user.username || "";
 document.getElementById("birthdate").value = user.birth_date || "";
 document.getElementById("mobile").value = user.phone_number || "";
+document.getElementById("major").value = user.major || "";
 
 const passwordField = document.getElementById("password");
 passwordField.value = "••••••••";
@@ -74,6 +75,7 @@ saveBtn.addEventListener("click", async (event) => {
     username: document.getElementById("username").value,
     birth_date: document.getElementById("birthdate").value,
     phone_number: document.getElementById("mobile").value,
+    major: document.getElementById("major").value,
   };
 
   const newPassword = passwordField.value;

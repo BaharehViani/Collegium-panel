@@ -29,13 +29,16 @@ signupForm.addEventListener("submit", async function (event) {
     // گرفتن مقادیر ورودی‌ها
     const fullName = document.querySelector('.sign-up-form input[placeholder="FullName"]').value;
     const username = document.querySelector('.sign-up-form input[placeholder="Username (National ID)"]').value;
+    const major = document.querySelector('.sign-up-form input[placeholder="Field of Study"]').value;
     const password = document.querySelector('.sign-up-form input[placeholder="Password"]').value;
 
     try {
         const response = await axios.post(`${API_BASE_URL}/api/users/register`, {
             full_name: fullName,
             username: username,
-            password: password
+            major: major,
+            password: password,
+            role: "Student"
         });
 
         alert(response.data.message); 
