@@ -65,7 +65,12 @@ loginForm.addEventListener("submit", async (event) => {
 
         userStore.setUser(response.data.user);
         alert("Login successful");
-        window.location.href = "../html/dashboard.html";
+        if (response.data.user.role === "Student") {
+            window.location.href = "../html/dashboard.html";
+        } else {
+            window.location.href = "../html/dashboard-admin.html";
+        }
+        
     } catch (error) {
         console.error("Login failed:", error);
         alert("Invalid username or password");
