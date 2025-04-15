@@ -1,0 +1,117 @@
+/* Admin Dashboard Custom Styling */
+#content-area {
+  background: #E4E9F7;
+  padding: 10px 30px 30px;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  margin-bottom: 30px;
+}
+.dashboard-header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+.dashboard-header p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Cards Container */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Individual Card Styling */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card .card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.card .card-title i {
+  margin-right: 10px;
+  color: #4a90e2;
+}
+.card .card-value {
+  font-size: 30px;
+  font-weight: bold;
+  color: #4a90e2;
+  margin-bottom: 10px;
+}
+.card .card-desc {
+  font-size: 15px;
+  color: #777;
+  margin-bottom: 20px;
+}
+.card .card-link {
+  text-decoration: none;
+  align-self: flex-end;
+  background: #4a90e2;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+.card .card-link:hover {
+  background: #357ab8;
+}
+
+/* Admin Extended Section (Recent Activity) */
+.admin-section {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.admin-section h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.admin-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.admin-section table th,
+.admin-section table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.admin-section table th {
+  background: #f5f5f5;
+  font-weight: bold;
+  color: #fff;
+  background: #46627f;          
+  background: #40bd74;
+  background: #27ae60;
+  background: #4a90e2;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+}

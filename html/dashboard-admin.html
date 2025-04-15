@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Collegium</title>
+    <link rel="icon" href="../assets/img/new_logo.png" type="image/icon" />
+    <link rel="stylesheet" href="../css/main-page.css" />
+    <link rel="stylesheet" href="../css/dashboard-admin.css" />
+    <!-- Boxicons CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Sidebar Start -->
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bxl-c-plus-plus"></i>
+        <span class="logo_name">Collegium</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-house"></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Dashboard</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="students-list.html">
+              <i class="fa-solid fa-user"></i>
+              <span class="link_name">Students</span>
+            </a>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="students-list.html">Students</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-folder-open"></i>
+            <span class="link_name">Courses</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Courses</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-pen-to-square"></i>
+            <span class="link_name">Requests</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Requests</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-utensils"></i>
+            <span class="link_name">Meals</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Meals</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-calendar"></i>
+            <span class="link_name">Calendar</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Calendar</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-dollar-sign"></i>
+            <span class="link_name">Payments</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Payments</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-bookmark"></i>
+            <span class="link_name">Library</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Library</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" id="logout-btn">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <span class="link_name">Log Out</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="#" id="logout-btn">Log Out</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="profile-details">
+            <a href="profile.html">
+              <div class="profile-content">
+                <img src="" alt="profileImg">
+              </div>
+              <div class="name-job">
+                <div class="profile_name"></div>
+                <div class="job"></div>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- Sidebar End -->
+  
+    <section class="home-section">
+      <div class="home-content">
+        <i class="bx bx-menu"></i>
+        <span class="text">Dashboard</span>
+      </div>
+      <div id="content-area">
+        <!-- Admin Dashboard Content -->
+        <div class="dashboard-header">
+          <h1>Welcome Back, Admin!</h1>
+          <p>
+            Overview of the system. Manage students, courses, requests, and monitor daily activities.
+          </p>
+        </div>
+        
+        <div class="dashboard-cards">
+          <!-- Card 1: Total Students -->
+          <div class="card">
+            <div class="card-title">
+              <i class="fa-solid fa-users"></i>
+              Total Students
+            </div>
+            <div class="card-value">1,250</div>
+            <div class="card-desc">Registered students in the system.</div>
+            <a href="students-list.html" class="card-link">Manage Students</a>
+          </div>
+          <!-- Card 2: Pending Requests -->
+          <div class="card">
+            <div class="card-title">
+              <i class="fa-regular fa-pen-to-square"></i>
+              Pending Requests
+            </div>
+            <div class="card-value">85</div>
+            <div class="card-desc">Unapproved requests waiting for action.</div>
+            <a href="requests.html" class="card-link">Review Requests</a>
+          </div>
+          <!-- Card 3: Total Courses -->
+          <div class="card">
+            <div class="card-title">
+              <i class="fa-regular fa-folder-open"></i>
+              Total Courses
+            </div>
+            <div class="card-value">42</div>
+            <div class="card-desc">Active courses available.</div>
+            <a href="courses.html" class="card-link">View Courses</a>
+          </div>
+          <!-- Card 4: Today's Payments -->
+          <div class="card">
+            <div class="card-title">
+              <i class="fa-solid fa-dollar-sign"></i>
+              Today's Payments
+            </div>
+            <div class="card-value">$3,650</div>
+            <div class="card-desc">Total payments received today.</div>
+            <a href="payments.html" class="card-link">View Details</a>
+          </div>
+        </div>
+        
+        <!-- Recent Activity Section -->
+        <div class="admin-section">
+          <h2>Recent Activities</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Activity</th>
+                <th>User</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10:15 AM</td>
+                <td>Payment processed for Fall Semester</td>
+                <td>Michael Brown</td>
+              </tr>
+              <tr>
+                <td>09:30 AM</td>
+                <td>Request submitted for course enrollment</td>
+                <td>Emily Jane Smith</td>
+              </tr>
+              <tr>
+                <td>08:45 AM</td>
+                <td>New student registered</td>
+                <td>Chandler Bing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+      </div>
+    </section>
+  
+    <script src="../js/main-page.js" type="module"></script>
+  </body>
+</html>
