@@ -104,10 +104,7 @@
   background: #f5f5f5;
   font-weight: bold;
   color: #fff;
-  background: #46627f;          
-  background: #40bd74;
-  background: #27ae60;
-  background: #4a90e2;
+  background: linear-gradient(135deg, #4a90e2, #50c9c3);
 }
 
 @media screen and (max-width: 768px) {

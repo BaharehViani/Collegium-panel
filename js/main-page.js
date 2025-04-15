@@ -15,6 +15,16 @@ if (user) {
     document.querySelector(".profile-content img").src = user.photo || "../assets/img/primary_pic.JPG";
 }
 
+const profile = document.querySelector("#profile");
+profile.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (user.role === "Admin") {
+        window.location.href = "profile-admin.html";
+    } else {
+        window.location.href = "profile.html";
+    }
+});
+
 let arrow = document.querySelectorAll(".arrow");
 for (var i = 0; i < arrow.length; i++) {
     arrow[i].addEventListener("click", (e)=>{
