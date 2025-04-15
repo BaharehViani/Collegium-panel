@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Projects - Collegium </title>
+    <link rel="icon" href="../assets/img/new_logo.png" type="image/icon" />
+    <link rel="stylesheet" href="../css/main-page.css" />
+    <link rel="stylesheet" href="../css/projects.css" />
+    <!-- Boxicons CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  </head>
+  <body>
+    <!-- Sidebar Start -->
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bxl-c-plus-plus"></i>
+        <span class="logo_name">Collegium</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="dashboard.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="courses.html">
+              <i class="fa-regular fa-folder-open"></i>
+              <span class="link_name">Courses</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li>
+              <a class="link_name" href="courses.html">Courses</a>
+            </li>
+            <li>
+              <a href="grades.html">Grades</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="meals.html">
+            <i class="fa-solid fa-utensils"></i>
+            <span class="link_name">Meals</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="meals.html">Meals</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="forms.html">
+            <i class="fa-regular fa-pen-to-square"></i>
+            <span class="link_name">Forms</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="forms.html">Forms</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-compass-drafting"></i>
+            <span class="link_name">Projects</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="#">Projects</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-calendar"></i>
+            <span class="link_name">Calendar</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="#">Calendar</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-dollar-sign"></i>
+            <span class="link_name">Payments</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="#">Payments</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-bookmark"></i>
+            <span class="link_name">Library</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="#">Library</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" id="logout-btn">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <span class="link_name">Log Out</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="#" id="logout-btn">Log Out</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="profile-details">
+            <a href="profile.html">
+              <div class="profile-content">
+                <img src="" alt="profileImg" />
+              </div>
+              <div class="name-job">
+                <div class="profile_name"></div>
+                <div class="job"></div>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- Sidebar End -->
+
+    <section class="home-section">
+      <div class="home-content">
+        <i class="bx bx-menu"></i>
+        <span class="text">Projects</span>
+      </div>
+      <div id="content-area">
+        <div class="projects-wrapper">
+          
+          <!-- Completed Projects Section -->
+          <div class="projects-section">
+            <h2>Completed Projects</h2>
+            <div class="projects-container">
+              <!-- Weather Project Card -->
+              <div class="project-card">
+                <div class="project-thumbnail">
+                  <img
+                    src="https://private-user-images.githubusercontent.com/111139556/424972003-7d8afae6-b025-46e5-b955-cce64f8ae3d8.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDQ3MjgwMTIsIm5iZiI6MTc0NDcyNzcxMiwicGF0aCI6Ii8xMTExMzk1NTYvNDI0OTcyMDAzLTdkOGFmYWU2LWIwMjUtNDZlNS1iOTU1LWNjZTY0ZjhhZTNkOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDE1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQxNVQxNDM1MTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iOTY5MTFhZWFkNzNkMmViZDVmNTYwMGYxYzA3MjY5MTFiNTQyNGUyZWJjOWU2NzkxOWU1Mzk3OWJiYmYzNzQyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.4xpUJ9snifkTItV2MmKCdYDpjZUVRRnTmERtZlbo3So"
+                    alt="Weather Project Preview"
+                  />
+                </div>
+                <div class="project-details">
+                  <h3>Weather Forecast</h3>
+                  <div class="btn-group">
+                    <a href="https://weather-app-baharehviani.netlify.app/" class="btn-view">View</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Clock Project Card -->
+              <div class="project-card">
+                <div class="project-thumbnail">
+                  <img
+                    src="https://private-user-images.githubusercontent.com/111139556/433929125-ae79ee7f-d5c0-47cf-9469-fa363b845ec8.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDQ3MzI5NTAsIm5iZiI6MTc0NDczMjY1MCwicGF0aCI6Ii8xMTExMzk1NTYvNDMzOTI5MTI1LWFlNzllZTdmLWQ1YzAtNDdjZi05NDY5LWZhMzYzYjg0NWVjOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDE1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQxNVQxNTU3MzBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zYzQzYmNkZDBlMTgyZDcyYjRiOTk3ZDAzZjA5ZGVkNzE4NTMzMjRjMDZiODhlYTIyYmY5ZTg2ZWYyOWY4NjBkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.VFAQSEIATLUIzZYtdnGtb_ZvNXnEhJ8Z0Qt7Ir3YhAs"
+                    alt="Clock Project Preview"
+                  />
+                </div>
+                <div class="project-details">
+                  <h3>World Clock</h3>
+                  <div class="btn-group">
+                    <a href="https://world-clock-baharehviani.netlify.app/" class="btn-view">View</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Ongoing Projects Section -->
+          <div class="projects-section">
+            <h2>Ongoing Projects</h2>
+            <div class="projects-container">
+              <!-- Poem Generator Project Card -->
+              <div class="project-card">
+                <div class="project-thumbnail">
+                  <img
+                    src="https://private-user-images.githubusercontent.com/111139556/432405130-462c0a95-89ea-434e-b5cd-4bd1004c223d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDQ3MjgwOTMsIm5iZiI6MTc0NDcyNzc5MywicGF0aCI6Ii8xMTExMzk1NTYvNDMyNDA1MTMwLTQ2MmMwYTk1LTg5ZWEtNDM0ZS1iNWNkLTRiZDEwMDRjMjIzZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDE1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQxNVQxNDM2MzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wMGUzM2FmZTg2OTcxOGMwMmZhZmNiZTM1OTIzN2YzOGY1NTc5MzA1MmI0NzFhZmU5MTczMTAyOWE3NzJmYzYyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.REzAtOvLeKTNpPsECuINprEdMp2nYAEujr07nqWs-XA"
+                    alt="Poem Generator Preview"
+                  />
+                </div>
+                <div class="project-details">
+                  <h3>AI Poem Generator</h3>
+                  <div class="btn-group">
+                    <a href="https://poem-generator-baharehviani.netlify.app/" class="btn-view">View</a>
+                    <a href="" class="btn-edit">Edit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/main-page.js" type="module"></script>
+  </body>
+</html>
