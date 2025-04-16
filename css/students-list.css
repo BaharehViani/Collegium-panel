@@ -71,13 +71,17 @@
     flex-wrap: wrap;
 }
 
-label[for="major-select"] {
+label[for="major-select"], label[for="order-select"] {
     font-size: 16px;
     font-weight: 500;
     color: #333;
 }
 
-#major-select {
+label[for="order-select"] {
+    margin-left: 20px;
+}
+
+#major-select, #order-select {
     padding: 6px 8px;
     font-size: 15px;
     border: 1px solid #ccc;
@@ -88,6 +92,7 @@ label[for="major-select"] {
     transition: border-color 0.3s ease;
 }
 
-#major-select:hover, #major-select:focus {
+#major-select:hover, #major-select:focus,
+#order-select:hover, #order-select:focus {
     outline: none;
 }

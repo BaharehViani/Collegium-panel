@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const studentsList = document.getElementById("students-list");
 const majorSelect = document.getElementById("major-select");
+const orderSelect = document.getElementById("order-select");
 
 function renderStudentCard(student) {
     const studentCard = document.createElement("div");
@@ -32,13 +33,13 @@ function renderStudentCard(student) {
     studentsList.appendChild(studentCard);
 }
 
-async function fetchStudents(major = "") {
+async function fetchStudents(major = "", orderBy = "") {
     try {
-        const url = major
-            ? `${API_BASE_URL}/api/users?major=${encodeURIComponent(major)}`
-            : `${API_BASE_URL}/api/users`;
+        const params = new URLSearchParams();
+        if (major) params.append("major", major);
+        if (orderBy) params.append("orderBy", orderBy);
 
-        const response = await axios.get(url);
+        const response = await axios.get(`${API_BASE_URL}/api/users?${params}`);
         const students = response.data.users;
 
         studentsList.innerHTML = "";
@@ -70,11 +71,19 @@ async function fetchMajors() {
     }
 }
 
+// majorSelect.addEventListener("change", () => {
+//     fetchStudents(majorSelect.value);
+// });
+
 majorSelect.addEventListener("change", () => {
-    fetchStudents(majorSelect.value);
+    fetchStudents(majorSelect.value, orderSelect.value);
+});
+  
+orderSelect.addEventListener("change", () => {
+    fetchStudents(majorSelect.value, orderSelect.value);
 });
 
 (async function initPage() {
-    await fetchStudents();
+    await fetchStudents("", "");
     await fetchMajors();
 })();
