@@ -128,8 +128,35 @@
         <span class="text">Meals</span>
       </div>
       <div id="content-area">
+
+
+
+        <div class="top-bar">
+          <!-- Restaurant Dropdown -->
+          <div class="restaurant-selection">
+            <label for="restaurant-select">Select Cafeteria:</label>
+            <select id="restaurant-select">
+              <option value="restaurant1">Central Dining Hall</option>
+              <option value="restaurant2">Campus Cafeteria</option>
+              <option value="restaurant3">Dorm Cafeteria</option>
+            </select>
+          </div>
+          <!-- Balance Section -->
+          <div class="balance-container">
+            <h3>Your Balance: $<span id="balance-amount"></span> </h3>
+            <button id="add-balance-btn">+</button>
+          </div>
+        </div>
+        
+
+        <!-- Date Picker Bar -->
+        <div class="date-picker-bar">
+          <!-- روزها با JS اضافه میشن -->
+        </div>
+
+
         <div class="meal-reservation-container">
-          <h2>Tommorrow's Meal Reservation</h2>
+          <h2 id="reservation-title">Meal Reservation</h2>
           <p class="date" id="currentDate"></p>
           
           <!-- Lunch Section -->
@@ -140,6 +167,7 @@
               <div class="meal-card" data-reserved="false">
                 <span class="meal-icon" role="img" aria-label="burger">🍔</span>
                 <span class="meal-title">Cheesy Burger</span>
+                <span class="meal-price">$5</span>
                 <div class="meal-actions">
                   <button class="reserve-btn">Reserve Meal</button>
                   <button class="cancel-btn" style="display:none;">Cancel Reservation</button>
@@ -148,6 +176,7 @@
               <div class="meal-card" data-reserved="false">
                 <span class="meal-icon" role="img" aria-label="salad">🥗</span>
                 <span class="meal-title">Chicken Salad</span>
+                <span class="meal-price">$3.5</span>
                 <div class="meal-actions">
                   <button class="reserve-btn">Reserve Meal</button>
                   <button class="cancel-btn" style="display:none;">Cancel Reservation</button>
@@ -157,6 +186,7 @@
               <div class="meal-card" data-reserved="false">
                 <span class="meal-icon" role="img" aria-label="drink">🥤</span>
                 <span class="meal-title">Soda</span>
+                <span class="meal-price">$1</span>
                 <div class="meal-actions">
                   <button class="reserve-btn">Reserve Drink</button>
                   <button class="cancel-btn" style="display:none;">Cancel Reservation</button>
@@ -173,6 +203,7 @@
               <div class="meal-card" data-reserved="false">
                 <span class="meal-icon" role="img" aria-label="spaghetti">🍝</span>
                 <span class="meal-title">Spaghetti Bolognese</span>
+                <span class="meal-price">$4.5</span>
                 <div class="meal-actions">
                   <button class="reserve-btn">Reserve Meal</button>
                   <button class="cancel-btn" style="display:none;">Cancel Reservation</button>
@@ -181,6 +212,7 @@
               <div class="meal-card" data-reserved="false">
                 <span class="meal-icon" role="img" aria-label="fish">🐟</span>
                 <span class="meal-title">Grilled Salmon</span>
+                <span class="meal-price">$8</span>
                 <div class="meal-actions">
                   <button class="reserve-btn">Reserve Meal</button>
                   <button class="cancel-btn" style="display:none;">Cancel Reservation</button>
@@ -190,6 +222,7 @@
               <div class="meal-card" data-reserved="false">
                 <span class="meal-icon" role="img" aria-label="drink">🍹</span>
                 <span class="meal-title">Smoothie</span>
+                <span class="meal-price">$2.5</span>
                 <div class="meal-actions">
                   <button class="reserve-btn">Reserve Drink</button>
                   <button class="cancel-btn" style="display:none;">Cancel Reservation</button>
