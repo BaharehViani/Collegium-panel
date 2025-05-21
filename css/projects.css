@@ -14,8 +14,9 @@
     font-size: 22px;
     color: #444;
     margin-bottom: 20px;
-    border-bottom: 2px solid #dadada;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 10px;
+    display: inline-block;
 }
 .projects-container {
     display: grid;
@@ -70,6 +71,7 @@
 .btn-view {
     text-decoration: none;
     background: #4a90e2;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -77,10 +79,13 @@
 }
 .btn-view:hover {
     background: #357ab8;
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #2f80ed, #00c6ff);
 }
 .btn-edit {
     text-decoration: none;
     background: #50c9c3;
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
     color: #fff;
     padding: 10px 24px;
     border-radius: 5px;
@@ -88,6 +93,8 @@
 }
 .btn-edit:hover {
     background: #3ea59e;
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #2ed573, #1dd1a1);
 }
 @media screen and (max-width: 768px) {
     .project-thumbnail img {
