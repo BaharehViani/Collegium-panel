@@ -7,6 +7,7 @@
   <link rel="icon" href="../assets/img/new_logo.png" type="image/icon" />
   <link rel="stylesheet" href="../css/forms.css" />
   <link rel="stylesheet" href="../css/main-page.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <!-- Boxiocns CDN Link -->
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <!-- Font Awesome -->
@@ -132,8 +133,8 @@
         <!-- اینجا محتوای هر صفحه لود میشه -->
 
         <div class="form-container">
-            <h2>Submit Your Request</h2>
-            <form id="requestForm" onsubmit="return handleSubmit(event)">
+            <h2>Request Form</h2>
+            <form id="requestForm">
               <!-- Request Title -->
               <div class="form-group">
                 <label for="requestTitle">Request Title</label>
@@ -165,7 +166,7 @@
               
               <!-- Submit Button -->
               <div class="form-group">
-                <input type="submit" value="Submit Request" />
+                <button id="form-submit" type="submit">Submit Request</button>
               </div>
             </form>
           </div>  
@@ -174,10 +175,31 @@
         <div class="form-image">
           <img src="../assets/img/begin-chat.svg" alt="Request Illustration">
         </div>
+
+
+        <div class="table-container">
+          <h2 class="table-title">List of Submitted Requests</h2>
+          <table id="formsTable">
+            <thead>
+              <tr>
+                <th>Request Code</th>
+                <th>Request Title</th>
+                <th>Request Type</th>
+                <th>Request Content</th>
+                <th>Request Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- ردیف‌ها توسط JS اضافه می‌شوند -->
+            </tbody>
+          </table>
+        </div>
+
     </div>
   </section>
   
-  <script src="../js/forms.js"></script>
+  <script src="../js/forms.js" type="module"></script>
   <script src="../js/main-page.js" type="module"></script>
 </body>
 </html>

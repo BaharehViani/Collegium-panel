@@ -12,7 +12,7 @@
 
 .form-container {
     background: white;
-    padding: 2rem 2rem 1rem 2rem;
+    padding: 1.5rem 2rem 1rem 2rem;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     width: 100%;
@@ -27,10 +27,18 @@
 
 .form-container h2 {
     text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
     color: #333;
     font-weight: bold;
+}
+
+.table-title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  margin-top: 2px;
+  color: #333;
 }
 
 .form-group {
@@ -71,7 +79,7 @@
     min-height: 120px;
 }
 
-.form-group input[type="submit"] {
+.form-group button[type="submit"] {
     background: linear-gradient(135deg, #2980b9, #3498db);
     color: #fff;
     border: none;
@@ -85,7 +93,7 @@
     margin-top: 10px;
 }
 
-.form-group input[type="submit"]:hover {
+.form-group button[type="submit"]:hover {
     background: linear-gradient(135deg, #3498db, #2980b9);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(45, 67, 214, 0.3);
@@ -102,4 +110,121 @@
 
 .home-content {
     background: #C6E6FA;
+}
+
+.table-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 2rem auto;
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+#formsTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#formsTable thead th {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border: none;
+}
+
+#formsTable tbody tr {
+  background: #fafafa;
+  transition: all 0.3s, transform 0.2s;
+}
+
+#formsTable tbody tr:hover {
+  background: #f0f8ff;
+  transform: translateX(3px);
+}
+
+#formsTable tbody td {
+  padding: 0.75rem 1rem;
+  color: #333;
+  border: none;
+}
+
+#formsTable th,
+#formsTable td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+#formsTable .edit-btn,
+#formsTable .delete-btn {
+  padding: 0.4rem 0.8rem;
+  margin-right: 0.3rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s, transform 0.2s;
+}
+
+#formsTable .edit-btn {
+  background: #f1c40f;
+  color: #fff;
+  margin-bottom: 5px;
+}
+#formsTable .edit-btn:hover {
+  background: #f39c12;
+  transform: translateY(-2px);
+}
+
+#formsTable .delete-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+#formsTable .delete-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  #formsTable thead {
+    display: none;
+  }
+  #formsTable, 
+  #formsTable tbody, 
+  #formsTable tr, 
+  #formsTable td {
+    display: block;
+    width: 100%;
+  }
+  #formsTable tr {
+    margin-bottom: 1rem;
+  }
+  #formsTable td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  #formsTable td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #555;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: default;
 }
