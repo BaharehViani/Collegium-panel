@@ -43,10 +43,7 @@ document.querySelectorAll(".meal-card").forEach((card) => {
       const balance = getBalance();
 
       if (balance >= price) {
-        // کم کردن قیمت از بالانس
         setBalance(balance - price);
-
-        // اضافه کردن به لیست رزروها
         current.push(title);
         saveReservedMeals(current);
         updateMealCardState(card, true);
@@ -60,12 +57,9 @@ document.querySelectorAll(".meal-card").forEach((card) => {
   cancelBtn.addEventListener("click", () => {
     let current = getReservedMeals();
     if (current.includes(title)) {
-      // بازگرداندن مبلغ به بالانس
       const price = getPriceFromCard(card);
       const balance = getBalance();
       setBalance(balance + price);
-
-      // حذف از رزروها
       current = current.filter((t) => t !== title);
       saveReservedMeals(current);
       updateMealCardState(card, false);

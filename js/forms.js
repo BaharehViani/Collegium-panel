@@ -4,14 +4,14 @@ const API_BASE_URL = "http://localhost:5000";
 
 loadUserForms();
 async function loadUserForms() {
-  if (!user || !user.id) {
+  if (!user || !user._id) {
     console.error("User ID not found.");
     return;
   }
 
   try {
     const response = await axios.get(
-      `${API_BASE_URL}/api/users/forms/${user.id}`
+      `${API_BASE_URL}/api/users/forms/${user._id}`
     );
     const forms = response.data.forms;
     renderFormsTable(forms);
@@ -35,8 +35,8 @@ function renderFormsTable(forms) {
       <td data-label="Content">${form.content}</td>
       <td data-label="Status">${form.status}</td>
       <td>
-        <button class="edit-btn" data-id="${form.id}">Edit</button>
-        <button class="delete-btn" data-id="${form.id}">Delete</button>
+        <button class="edit-btn" data-id="${form._id}">Edit</button>
+        <button class="delete-btn" data-id="${form._id}">Delete</button>
       </td>
     `;
     tbody.appendChild(tr);
@@ -52,7 +52,8 @@ function renderFormsTable(forms) {
 
 let editingFormId = null;
 async function onEditClick(event) {
-  document.querySelector(".edit-btn").classList.add("disabled");
+  event.currentTarget.disabled = true;
+  event.currentTarget.classList.add("disabled");
 
   const formId = event.currentTarget.dataset.id;
   editingFormId = formId;
@@ -101,7 +102,7 @@ form.addEventListener("submit", async (event) => {
     title: title,
     type: type,
     content: content,
-    user_id: user.id,
+    user_id: user._id,
   };
 
   try {

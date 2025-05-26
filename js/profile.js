@@ -105,7 +105,7 @@ saveBtn.addEventListener("click", async (event) => {
 
 async function sendUpdateRequest(updatedUserData) {
   try {
-    const detailsResponse = await axios.patch(`${API_BASE_URL}/api/users/${user.id}`, updatedUserData, {
+    const detailsResponse = await axios.patch(`${API_BASE_URL}/api/users/${user._id}`, updatedUserData, {
       headers: { "Content-Type": "application/json" }
     });
   
