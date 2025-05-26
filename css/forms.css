@@ -1,36 +1,36 @@
 #content-area {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    /* background: linear-gradient(90deg, rgba(165,249,177,1) 0%, rgba(39,148,96,1) 100%); */
-    /* background: #E4E9F7; */
-    background: #C6E6FA;
-    padding: 0.5rem 2rem 2rem;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(90deg, rgba(165,249,177,1) 0%, rgba(39,148,96,1) 100%); */
+  /* background: #E4E9F7; */
+  background: #c6e6fa;
+  padding: 0.5rem 2rem 2rem;
+  flex-wrap: wrap;
 }
 
 .form-container {
-    background: white;
-    padding: 1.5rem 2rem 1rem 2rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 600px;
-    margin: 5px auto auto;
-    transition: all 0.3s ease;
+  background: white;
+  padding: 1.5rem 2rem 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  margin: 5px auto auto;
+  transition: all 0.3s ease;
 }
 
 .form-container:hover {
-    transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 .form-container h2 {
-    text-align: center;
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-    color: #333;
-    font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
 }
 
 .table-title {
@@ -42,74 +42,74 @@
 }
 
 .form-group {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: #555;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
 }
 
 .form-group input[type="text"],
 .form-group select,
 .form-group textarea,
 .form-group input[type="file"] {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
-    background: #f9f9f9;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color:#3498db;
-    outline: none;
-    box-shadow: 0 0 5px rgba(106, 17, 203, 0.3);
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.3);
 }
 
 .form-group textarea {
-    resize: vertical;
-    min-height: 120px;
+  resize: vertical;
+  min-height: 120px;
 }
 
 .form-group button[type="submit"] {
-    background: linear-gradient(135deg, #2980b9, #3498db);
-    color: #fff;
-    border: none;
-    padding: 0.75rem;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-    font-weight: bold;
-    margin-top: 10px;
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .form-group button[type="submit"]:hover {
-    background: linear-gradient(135deg, #3498db, #2980b9);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(45, 67, 214, 0.3);
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(45, 67, 214, 0.3);
 }
 
 .form-image {
-    max-width: 400px;
+  max-width: 400px;
 }
 
 .form-image img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .home-content {
-    background: #C6E6FA;
+  background: #c6e6fa;
 }
 
 .table-container {
@@ -119,15 +119,15 @@
   overflow-x: auto;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   padding: 1rem;
 }
 
 #formsTable {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0 8px; 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-spacing: 0 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #formsTable thead th {
@@ -161,7 +161,6 @@
   text-align: center;
   vertical-align: middle;
 }
-
 
 #formsTable .edit-btn,
 #formsTable .delete-btn {
@@ -197,9 +196,9 @@
   #formsTable thead {
     display: none;
   }
-  #formsTable, 
-  #formsTable tbody, 
-  #formsTable tr, 
+  #formsTable,
+  #formsTable tbody,
+  #formsTable tr,
   #formsTable td {
     display: block;
     width: 100%;
