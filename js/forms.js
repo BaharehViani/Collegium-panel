@@ -39,14 +39,19 @@ function renderFormsTable(forms) {
         <button class="delete-btn" data-id="${form._id}">Delete</button>
       </td>
     `;
-    tbody.appendChild(tr);
-  });
 
-  document.querySelectorAll(".edit-btn").forEach((btn) => {
-    btn.addEventListener("click", onEditClick);
-  });
-  document.querySelectorAll(".delete-btn").forEach((btn) => {
-    btn.addEventListener("click", onDeleteClick);
+    tbody.appendChild(tr);
+
+    const editBtn = tr.querySelector(".edit-btn");
+    const deleteBtn = tr.querySelector(".delete-btn");
+
+    if (form.status === 'rejected' || form.status === 'approved') {
+      editBtn.classList.add("disabled");
+      deleteBtn.classList.add("disabled")
+    } else {
+      editBtn.addEventListener("click", onEditClick);
+      deleteBtn.addEventListener("click", onDeleteClick);
+    }
   });
 }
 
