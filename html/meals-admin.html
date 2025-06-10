@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Profile - Collegium </title>
+    <title> Meals Report - Collegium </title>
     <link rel="icon" href="../assets/img/new_logo.png" type="image/icon" />
     <link rel="stylesheet" href="../css/main-page.css">
-    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/meals-admin.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- Font Awesome -->
@@ -124,51 +125,46 @@
   <section class="home-section">
     <div class="home-content">
       <i class='bx bx-menu' ></i>
-      <span class="text">Profile</span>
+      <span class="text">Meals Reservation Report</span>
     </div>
     <div id="content-area">
-        <!-- اینجا محتوای هر صفحه لود میشه -->
-        <div class="profile-container">
-            <h2>User Profile</h2>
-            <div class="profile-card">
-              <div class="profile-pic-wrapper">
-                <img src="" alt="User Picture" class="profile-pic">
-                <!-- Hidden file input for photo change -->
-                <input type="file" id="photo-input" class="hidden" accept="image/*">
-                <button type="button" id="change-photo-btn" class="hidden">Change Photo</button>
-              </div>
-              <form action="#" method="POST" class="profile-form">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" value="" disabled>
-                
-                <label for="username">Username (National ID):</label>
-                <input type="number" id="username" name="username" value="" disabled>
+        <div class="meals-admin-panel">
 
-                <label for="major" id="major-lable">Field of Study:</label>
-                <input type="text" id="major" name="major" value="" disabled>
+            <div class="filters">
+                <input type="date" id="report-date" />
                 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" value="" disabled>
-                
-                <label for="birthdate">Birth Date:</label>
-                <input type="date" id="birthdate" name="birthdate" value="" disabled>
-                
-                <label for="mobile">Phone Number:</label>
-                <input type="tel" id="mobile" name="mobile" value="" disabled>
-                
-                <div class="button-group">
-                  <button type="button" id="edit-btn">Edit</button>
-                  <button type="submit" id="save-btn" class="hidden">Save</button>
-                  <button type="button" id="cancel-btn" class="hidden">Cancel</button>
-                  <button type="button" id="delete-account-btn">Delete Account</button>
+                <select id="restaurant-select">
+                </select>
+
+                <div class="meal-time-selector">
+                <!-- <button data-meal="breakfast" >Breakfast</button> -->
+                <button data-meal="lunch" class="active">Lunch</button>
+                <button data-meal="dinner">Dinner</button>
                 </div>
-              </form>
             </div>
-          </div>
+
+            <div class="report-table-container">
+                <table class="meals-report-table">
+                <thead>
+                    <tr>
+                    <th>Meal</th>
+                    <th>Reservations</th>
+                    </tr>
+                </thead>
+                <tbody id="report-table-body">
+                    
+                </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="export-button-container">
+            <button id="export-btn" class="export-button">Export to Excel</button>
+        </div>
     </div>
   </section>
   
   <script src="../js/main-page.js" type="module"></script>
-  <script src="../js/profile.js" type="module"></script>
+  <script src="../js/meals-admin.js"></script>
 </body>
 </html>

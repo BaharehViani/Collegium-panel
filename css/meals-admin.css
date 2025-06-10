@@ -1,0 +1,94 @@
+.meals-admin-panel {
+  margin: 1.3rem 3rem;
+  padding: 2rem;
+  background-color: #f8f9fd;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.meals-admin-panel h2 {
+  margin-bottom: 1.5rem;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filters input,
+.filters select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.meal-time-selector {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.meal-time-selector button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #eee;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.meal-time-selector button.active {
+  background-color: #4b7bec;
+  color: white;
+}
+
+.report-table-container {
+  overflow-x: auto;
+}
+
+.meals-report-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.meals-report-table th,
+.meals-report-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.meals-report-table th {
+  background-color: #f1f2f6;
+  color: #555;
+}
+
+.export-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1.3rem 3.2rem;
+}
+.export-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.export-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
