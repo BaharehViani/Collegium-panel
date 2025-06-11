@@ -1,15 +1,4 @@
-// const API_BASE_URL = "https://collegium-api.up.railway.app";
 const API_BASE_URL = "http://localhost:5000";
-
-import userStore from "./userStore.js";
-const user = userStore.getUser();
-document.addEventListener("DOMContentLoaded", function () {
-    if (user.role !== "Admin") {
-      alert("You are not authorized to access this page.");
-      window.location.href = "../index.html";
-      return;
-    } 
-});
 
 const studentsList = document.getElementById("students-list");
 const majorSelect = document.getElementById("major-select");
@@ -70,10 +59,6 @@ async function fetchMajors() {
         console.error("Failed to load majors:", error);
     }
 }
-
-// majorSelect.addEventListener("change", () => {
-//     fetchStudents(majorSelect.value);
-// });
 
 majorSelect.addEventListener("change", () => {
     fetchStudents(majorSelect.value, orderSelect.value);

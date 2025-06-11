@@ -7,6 +7,25 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../index.html";
       return;
     } 
+
+    const currentPage = window.location.pathname.split("/").pop();
+
+    let isAdminPage;
+    if (currentPage.endsWith("-admin.html") || currentPage.endsWith("students-list.html")) {
+        isAdminPage = true;
+    }
+
+    if (isAdminPage && user.role !== "Admin") {
+        alert("Access denied: You are not authorized to access this page.");
+        window.location.href = "../index.html";
+        return;
+    }
+
+    if (!isAdminPage && user.role !== "Student") {
+        alert("Access denied: You are not authorized to access this page.");
+        window.location.href = "../index.html";
+        return;
+    }
 });
 
 if (user) {
