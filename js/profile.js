@@ -150,15 +150,15 @@ photoInput.addEventListener("change", (event) => {
   }
 });
 
-deleteBtn.addEventListener("click", async function () {
+deleteBtn.addEventListener("click", async () => {
   if (confirm("Are you sure you want to delete your account? This action cannot be undone.")) {
     try {
-      const response = await axios.delete(`${API_BASE_URL}/api/users/${user.id}`);
+      const response = await axios.delete(`${API_BASE_URL}/api/users/${user._id}`);
         
       if (response.status === 200) {
         alert("Account deleted successfully.");
-        userStore.logout(); // پاک کردن اطلاعات کاربر از استور
-        window.location.href = "../index.html"; // بازگشت به صفحه اصلی
+        userStore.logout();
+        window.location.href = "../index.html";
       } else {
         alert(response.data.message || "Error deleting account.");
       }

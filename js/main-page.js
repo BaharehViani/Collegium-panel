@@ -18,12 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isAdminPage && user.role !== "Admin") {
         alert("Access denied: You are not authorized to access this page.");
         window.location.href = "../index.html";
+        user.logout();
         return;
     }
 
     if (!isAdminPage && user.role !== "Student") {
         alert("Access denied: You are not authorized to access this page.");
         window.location.href = "../index.html";
+        user.logout();
         return;
     }
 });

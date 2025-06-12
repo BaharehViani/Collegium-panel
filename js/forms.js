@@ -85,7 +85,7 @@ async function onDeleteClick(event) {
   try {
     const response = await axios.delete(
       `${API_BASE_URL}/api/users/form/${formId}`,
-      { data: { user_id: user.id } }
+      { data: { user_id: user._id } }
     );
     alert(response.data.message);
     loadUserForms();
