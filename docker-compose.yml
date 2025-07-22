@@ -1,0 +1,9 @@
+services:
+  collegium-client:
+    container_name: collegium-client
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "24010:80"
