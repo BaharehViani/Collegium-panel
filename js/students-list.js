@@ -1,4 +1,5 @@
-const API_BASE_URL = "http://localhost:5000";
+// const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "https://collegiumapi.kojiberi.com";
 
 const studentsList = document.getElementById("students-list");
 const majorSelect = document.getElementById("major-select");

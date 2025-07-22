@@ -1,4 +1,6 @@
-const API_BASE_URL = "http://localhost:5000";
+// const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "https://collegiumapi.kojiberi.com";
+
 const dateInput = document.getElementById("report-date");
 const restaurantSelect = document.getElementById("restaurant-select");
 const mealButtons = document.querySelectorAll(".meal-time-selector button");

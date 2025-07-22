@@ -1,5 +1,6 @@
 // const API_BASE_URL = "https://collegium-api.up.railway.app";
-const API_BASE_URL = "http://localhost:5000"; 
+// const API_BASE_URL = "http://localhost:5000"; 
+const API_BASE_URL = "https://collegiumapi.kojiberi.com";
 
 const urlParams = new URLSearchParams(window.location.search);
 const course_name = urlParams.get("course");
